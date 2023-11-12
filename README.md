@@ -10,5 +10,10 @@ for extraction, transformation, and load process.
 
 backup.sh bash script provides a worked mysql database backup example with timestamp.
 
+run bash_etl_example.sh script with 
+./bash_etl_example.sh airquality_nyc.csv cleaned_airquality_nyc.csv 
+for example.  file source and destination names taken at script run input.
+Don't forget to change executable run permissions for bash scripts to run them in your local directory.
+
 
 
