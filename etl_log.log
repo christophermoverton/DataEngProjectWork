@@ -10,3 +10,9 @@
 2023-11-10 20:39:53,517 - INFO - Loading data into destination: /home/christopher/Documents/interview_prep/cleaned_dummy_data.csv
 2023-11-10 20:39:53,525 - INFO - Data loaded successfully
 2023-11-10 20:39:53,525 - INFO - Data loaded successfully
+2023-11-11 20:42:21,057 - INFO - Extracting data from CSV file: /home/christopher/Documents/interview_prep/dummy_data.csv
+2023-11-11 20:42:35,225 - INFO - Extracting data from CSV file: /home/christopher/Documents/interview_prep/dummy_data.csv
+2023-11-11 20:43:33,572 - INFO - Extracting data from CSV file: /home/christopher/Documents/DataEngProjectWork/dummy_data.csv
+2023-11-11 20:43:33,581 - INFO - Transforming and cleaning data
+2023-11-11 20:43:33,588 - INFO - Loading data into destination: /home/christopher/Documents/DataEngProjectWork/cleaned_dummy_data.csv
+2023-11-11 20:43:33,592 - INFO - Data loaded successfully
