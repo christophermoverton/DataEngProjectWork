@@ -15,5 +15,9 @@ run bash_etl_example.sh script with
 for example.  file source and destination names taken at script run input.
 Don't forget to change executable run permissions for bash scripts to run them in your local directory.
 
+airflow_DAG_ETL_example script is run with related csv data example.  You'll want to modify path/to/csv as 
+needed in DAG file.  I've tested this script, for example, in virtual (localized) Airflow server environment
+but not containerized.  
+
 
 
