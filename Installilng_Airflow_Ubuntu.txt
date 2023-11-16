@@ -1,0 +1,48 @@
+Python virtual environment Airflow install on Ubuntu machine:
+1.  Ensure that you have pip or pip3 installed on your machine. (e.g., Sudo apt-get install pip3)
+2.  Install virtualenv.  At terminal:  Sudo apt-get install virtualenv.  
+Note: some guides suggest creating airflow_workspace directory and then sub-directory of airflow and installing
+airflow this way.  Apache airflow installs to the sub-directory with an export command assignment 
+of the AIRFLOW_HOME path, but after running the webserver and scheduler, I've found unless you establish from 
+the outset this unique path assignment relative defaults, then you'll have to go back to pip management 
+and properly install as needed, so that the virutal environment is reading from say the correct directory assignment
+from configuration, dag folder and log folder.  Otherwise, I've had the virtual environment defaulting to ~/airflow
+for installation and not the sub-directory for AIRFLOW_HOME path
+3.  At terminal: mkdir airflow 
+4.  At terminal: cd airflow
+5.  At terminal: virtualenv airflow_env
+6.  At terminal: source airflow_env/bin/activate
+7.  You should see (airflow_env) your_terminal_handle$  Indicating virtual environment activated.  Now you can install local packages 
+for this environment.  These modules are exclusive to this environment only and are not globally installed, so to use these 
+packages/modules and subsequent commands related, once installed in the virtual environment, you need to reactivate 
+the virtual environment (if it isn't active), when you want to run these packages.  Step 5-6 will allow you 
+to reactivate the virtual environment as needed once it is created
+8.  at terminal:  pip3 install apache-airflow  
+9.  at terminal: pip3 install pandas 
+10. at terminal: airflow db init
+11. at terminal: airflow users create --username your_admin_name --password your_admin_password --firstname your_first_name --lastname your_last_name --role Admin --email your_email@email.com
+
+you can verify at terminal user name:
+airflow users list
+
+12.  at terminal: airflow webserver
+Open another terminal tab, and launch the virtual environment per above.
+
+13.  at terminal: airflow scheduler
+Open another terminal tab, and launch the virtual environment per above.
+We can use this tab to verify loaded dags and do other terminal related stuff.
+14.  follow prompts to go to the correct localhost and port address as given on terminal webserver tab. 
+That is copy html address link and paste in your web browser.
+15.  Use the login and password from step 11 for sign in
+If all is well, you should see the Airflow home page with example DAGs listed at the Dashboard.
+16.  You can follow template example of any example or the script I've furnished in creating a DAG file:
+though you will need to have the proper library for DAG imported in script and DAG defined in script
+for Airflow to interpret properly your .py script as a DAG file.  
+17. at terminal in the ~/airflow directory: mkdir dags
+at terminal: ls 
+should show now dags and logs folder alongsider your airflow.cfg file.
+18. you can transfer your_properly_defined_DAG_scripts.py to this dags folder
+19.  at terminal: airflow dags list
+will confirm loaded dags.  It may take a little bit for the DAG to be read and load when refreshing the airflow
+dashboard page.
+
