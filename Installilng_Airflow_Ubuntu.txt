@@ -15,7 +15,7 @@ for installation and not the sub-directory for AIRFLOW_HOME path
 7.  You should see (airflow_env) your_terminal_handle$  Indicating virtual environment activated.  Now you can install local packages 
 for this environment.  These modules are exclusive to this environment only and are not globally installed, so to use these 
 packages/modules and subsequent commands related, once installed in the virtual environment, you need to reactivate 
-the virtual environment (if it isn't active), when you want to run these packages.  Step 5-6 will allow you 
+the virtual environment (if it isn't active), when you want to run these packages.  Step 6 will allow you 
 to reactivate the virtual environment as needed once it is created
 8.  at terminal:  pip3 install apache-airflow  
 9.  at terminal: pip3 install pandas 
